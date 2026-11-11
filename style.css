@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+:root {
+    --deep: #170b31;
+    --purple: #7134b5;
+    --violet: #9a55e8;
+    --pink: #f49be6;
+    --blue: #82baff;
+    --pale: #f5e7ff;
+    --ink: #35135e
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: #fff7ff;
+    font-family: Nunito, sans-serif;
+    background: radial-gradient(ellipse at 50% 15%, #67389d 0, #32165b 42%, #160a2d 100%);
+    overflow-x: hidden
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .35;
+    background-image: radial-gradient(#fff 1px, transparent 1px), radial-gradient(#dcbaff 1px, transparent 1px);
+    background-size: 48px 48px, 83px 83px;
+    background-position: 0 0, 23px 31px;
+    z-index: -1
+}
+
+.top {
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5%;
+    background: #16092fe8;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid #e4b5ff55
+}
+
+.logo {
+    font-weight: 900;
+    color: #f7d8ff
+}
+
+.music {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: #ffffff16;
+    border: 1px solid #e8baff66;
+    padding: 7px 10px;
+    border-radius: 14px
+}
+
+.music span {
+    font-size: 1.4rem;
+    color: #f4aaff
+}
+
+.music label {
+    font-size: .8rem
+}
+
+.music button {
+    border: 0;
+    border-radius: 50%;
+    background: #8146c1;
+    color: white;
+    width: 28px;
+    height: 28px;
+    cursor: pointer
+}
+
+.screen {
+    display: none;
+    min-height: calc(100vh - 64px);
+    padding: 55px 7% 80px;
+    max-width: 1250px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    animation: appear .65s ease
+}
+
+.screen.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0
+}
+
+.kicker {
+    color: #ffb8ed;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 900
+}
+
+.hero-title,
+h1 {
+    font: 700 clamp(2.8rem, 8vw, 6.5rem)/1.02 'Playfair Display', serif;
+    text-shadow: 0 0 25px #e68cff88;
+    margin: 10px 0 18px
+}
+
+h1 em,
+.birthday-title em {
+    color: #ff9bdf
+}
+
+.lead {
+    font-size: 1.08rem;
+    color: #ead8ff;
+    max-width: 650px
+}
+
+.ornament {
+    color: #f4b6ff;
+    margin: 22px
+}
+
+.card {
+    color: var(--ink);
+    background: linear-gradient(145deg, #fff2ff, #dfc2ff);
+    border: 2px solid #f5d8ff;
+    border-radius: 28px;
+    box-shadow: 0 0 28px #ce83ff55, inset 0 0 0 6px #fff5
+}
+
+.welcome-card {
+    width: min(620px, 100%);
+    padding: 30px 24px
+}
+
+.welcome-card h2 {
+    font: 700 clamp(1.4rem, 4vw, 2rem) 'Playfair Display', serif;
+    margin: 4px 0 10px
+}
+
+.welcome-card p {
+    color: #75548d
+}
+
+.bow {
+    font-size: 2.4rem;
+    margin-top: -14px
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 22px 0 12px
+}
+
+.btn {
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 27px;
+    font: 900 1rem Nunito, sans-serif;
+    cursor: pointer;
+    transition: transform .2s, filter .2s;
+    box-shadow: 0 6px 0 #32104e44
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.12)
+}
+
+.btn:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+    transform: none
+}
+
+.yes {
+    background: linear-gradient(135deg, #c54fe8, #7835c6);
+    color: white
+}
+
+.no {
+    background: linear-gradient(135deg, #5d83e6, #3845a5);
+    color: white
+}
+
+.bottom-note {
+    font: italic 1.2rem 'Playfair Display', serif;
+    color: #eecbff;
+    margin-top: 34px
+}
+
+.tulips {
+    font-size: clamp(1.4rem, 4vw, 2.8rem);
+    line-height: 1.5;
+    filter: drop-shadow(0 0 10px #bc81ff)
+}
+
+.tulips-left,
+.tulips-right {
+    position: absolute;
+    top: 25%;
+    opacity: .9
+}
+
+.tulips-left {
+    left: 2%
+}
+
+.tulips-right {
+    right: 2%
+}
+
+.mascot {
+    width: 95px;
+    height: 95px;
+    border-radius: 50% 50% 43% 43%;
+    background: #21182f;
+    border: 4px solid #080516;
+    color: #f58ce3;
+    font-size: 2.6rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    box-shadow: 0 0 0 5px #b77ce9
+}
+
+.mascot:before,
+.mascot:after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    width: 32px;
+    height: 45px;
+    background: #21182f;
+    border: 4px solid #080516;
+    z-index: -1
+}
+
+.mascot:before {
+    left: 3px;
+    transform: rotate(-25deg)
+}
+
+.mascot:after {
+    right: 3px;
+    transform: rotate(25deg)
+}
+
+.mascot b {
+    position: absolute;
+    bottom: 7px;
+    right: 12px;
+    font-size: 1.3rem
+}
+
+.mini {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    margin-bottom: 20px
+}
+
+.section-title {
+    font: 700 clamp(2rem, 5vw, 3.5rem) 'Playfair Display', serif;
+    color: #f9ddff;
+    text-shadow: 0 0 18px #c77bff77;
+    margin: 8px 0 30px
+}
+
+.question-list {
+    width: min(850px, 100%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px
+}
+
+.qcard {
+    padding: 22px 16px;
+    text-align: left
+}
+
+.qcard>span {
+    font-size: .68rem;
+    letter-spacing: .12em;
+    font-weight: 900;
+    color: #9857c1
+}
+
+.qcard h3 {
+    font-size: 1.05rem;
+    min-height: 55px;
+    margin: 12px 0;
+    color: #37165e
+}
+
+.choices {
+    display: grid;
+    gap: 8px
+}
+
+.choices button {
+    border: 1px solid #c89be9;
+    background: #fffaff;
+    color: #4d2670;
+    border-radius: 12px;
+    padding: 10px 8px;
+    font: 700 .85rem Nunito;
+    cursor: pointer
+}
+
+.choices button.selected {
+    background: #813dc2;
+    color: white;
+    border-color: #813dc2
+}
+
+.feedback {
+    color: #ffd3fa;
+    margin: 18px 0
+}
+
+.next {
+    margin-top: 10px
+}
+
+.photo-stage {
+    width: min(500px, 100%);
+    padding: 18px
+}
+
+.photo-frame {
+    background: white;
+    padding: 10px 10px 15px;
+    box-shadow: 0 8px 18px #39175c33;
+    transform: rotate(-1.5deg)
+}
+
+.photo-frame img {
+    width: 100%;
+    height: min(52vh, 440px);
+    object-fit: cover;
+    display: block;
+    background: #d6b8ed
+}
+
+.caption {
+    font: italic 1.15rem 'Playfair Display', serif;
+    margin: 18px 0 8px
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px
+}
+
+.dots i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c9a6e8
+}
+
+.dots i.on {
+    background: #813dc2;
+    transform: scale(1.3)
+}
+
+.tip {
+    font-size: .78rem;
+    color: #d9c0f2;
+    margin-top: 18px
+}
+
+.birthday-title {
+    font-size: clamp(3rem, 9vw, 7rem);
+    line-height: 1.05
+}
+
+.big-heart {
+    font-size: 6rem;
+    color: #ff9de8;
+    text-shadow: 0 0 35px #ff8be8;
+    animation: heartbeat 1.2s infinite
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.13)
+    }
+}
+
+.wish-card {
+    width: min(560px, 100%);
+    padding: 32px
+}
+
+.wish-card p {
+    color: #73508d
+}
+
+.moon {
+    font-size: 3.5rem;
+    color: #9d58d4
+}
+
+.wish-card textarea {
+    width: 100%;
+    min-height: 125px;
+    border: 1px solid #c99be8;
+    border-radius: 16px;
+    padding: 14px;
+    font: inherit;
+    color: #37165e;
+    resize: vertical;
+    margin: 12px 0
+}
+
+.cake-card {
+    padding: 30px;
+    width: min(520px, 100%)
+}
+
+.cake {
+    height: 190px;
+    width: 230px;
+    position: relative;
+    margin: 0 auto 20px
+}
+
+.cake-base {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 210px;
+    height: 78px;
+    border: 4px solid white;
+    border-radius: 12px 12px 25px 25px;
+    background: linear-gradient(90deg, #8840c7, #d48aff, #8840c7)
+}
+
+.cake-top {
+    position: absolute;
+    bottom: 72px;
+    left: 10px;
+    width: 210px;
+    height: 42px;
+    border: 4px solid white;
+    border-radius: 50%;
+    background: #ffb8e8;
+    z-index: 2
+}
+
+.frost {
+    position: absolute;
+    bottom: 51px;
+    left: 25px;
+    width: 180px;
+    height: 35px;
+    background: #f6dcff;
+    border-radius: 0 0 40% 40%;
+    z-index: 3
+}
+
+.candle-stick {
+    position: absolute;
+    z-index: 4;
+    bottom: 105px;
+    left: 109px;
+    width: 13px;
+    height: 43px;
+    border-radius: 4px;
+    background: repeating-linear-gradient(45deg, #fff 0 6px, #ec8bdc 6px 12px)
+}
+
+.flame {
+    position: absolute;
+    z-index: 5;
+    bottom: 145px;
+    left: 105px;
+    width: 21px;
+    height: 29px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background: radial-gradient(#fff7a5, #ff9c32 65%, transparent 70%);
+    filter: drop-shadow(0 0 9px #ffb53d);
+    animation: flicker .5s infinite alternate
+}
+
+.flame.off {
+    display: none
+}
+
+@keyframes flicker {
+    to {
+        transform: rotate(-35deg) scale(.82)
+    }
+}
+
+.sprinkles {
+    position: absolute;
+    z-index: 5;
+    bottom: 35px;
+    left: 55px;
+    color: #a85acb
+}
+
+.birthday-portrait {
+    position: relative;
+    width: min(540px, 100%);
+    padding: 14px;
+    overflow: hidden
+}
+
+.birthday-portrait img {
+    width: 100%;
+    height: min(58vh, 520px);
+    object-fit: cover;
+    display: block;
+    background: #d6b8ed
+}
+
+.portrait-title {
+    position: absolute;
+    inset: auto 14px 14px;
+    padding: 20px 8px;
+    background: linear-gradient(transparent, #260d49eF);
+    color: white;
+    font: 900 clamp(1.8rem, 6vw, 3.5rem)/1.08 'Playfair Display', serif;
+    text-shadow: 0 2px 12px #210b3a
+}
+
+.portrait-title em {
+    color: #ffabea
+}
+
+.letter {
+    max-width: 760px;
+    padding: 38px 45px;
+    text-align: left;
+    background: #fff1dd;
+    transform: rotate(-.5deg)
+}
+
+.letter-top {
+    text-align: center;
+    color: #9855b5;
+    font-weight: 900;
+    letter-spacing: .1em;
+    font-size: .8rem
+}
+
+.letter h2 {
+    font: 700 2rem 'Playfair Display', serif;
+    color: #57346c;
+    margin: 25px 0
+}
+
+.letter p {
+    color: #644a6d;
+    line-height: 1.85
+}
+
+.handwritten {
+    font: italic 1.35rem 'Playfair Display', serif !important;
+    color: #a13e9b !important
+}
+
+.signature {
+    display: block;
+    text-align: right;
+    color: #79578b;
+    margin-top: 25px
+}
+
+.gift-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 230px));
+    gap: 25px;
+    margin: 20px auto
+}
+
+.gift {
+    border: 2px solid #e9c4ff;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #7b3db5, #35205f);
+    color: white;
+    padding: 28px 18px;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 12px 25px #08031955
+}
+
+.gift-photo {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid #f5d8ff;
+    box-shadow: 0 7px 18px #16062966
+}
+
+.gift b {
+    font-size: 1.05rem
+}
+
+.gift small {
+    color: #e6cafa
+}
+
+.gift:hover {
+    transform: translateY(-7px)
+}
+
+.gift.chosen {
+    outline: 4px solid #ffb2eb;
+    filter: brightness(1.18)
+}
+
+.gift:disabled {
+    cursor: not-allowed;
+    opacity: .65;
+    transform: none
+}
+
+
+.gift.not-chosen {
+    opacity: .42;
+    filter: grayscale(.45);
+}
+
+.gift-reveal {
+    width: min(430px, 100%);
+    margin: 20px auto;
+    padding: 22px;
+    border: 2px solid #f1caff;
+    border-radius: 24px;
+    color: #35135e;
+    background: linear-gradient(145deg, #fff2ff, #dfc2ff);
+    box-shadow: 0 0 30px #e5a0ff66;
+    animation: appear .55s ease;
+}
+
+.gift-reveal h3 {
+    font: 700 1.55rem 'Playfair Display', serif;
+    margin-bottom: 14px;
+}
+
+.gift-reveal img {
+    display: block;
+    width: min(290px, 100%);
+    max-height: 300px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.gift-reveal p {
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.gift-message {
+    font-size: 1rem
+}
+
+footer {
+    text-align: center;
+    color: #d9b9ef;
+    padding: 30px;
+    border-top: 1px solid #fff2
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #10051ddd;
+    z-index: 30;
+    place-items: center;
+    padding: 20px
+}
+
+.modal.show {
+    display: grid
+}
+
+.modal-card {
+    position: relative;
+    max-width: 440px;
+    width: 100%;
+    padding: 38px 30px;
+    text-align: center;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #fff1ff, #dfc2ff);
+    color: #35135e;
+    box-shadow: 0 0 45px #e18aff88
+}
+
+.modal-card h2 {
+    font: 700 2rem 'Playfair Display', serif
+}
+
+.modal-card p {
+    line-height: 1.7
+}
+
+.modal-icon {
+    font-size: 3rem
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: 0;
+    background: none;
+    font-size: 2rem;
+    color: #35135e;
+    cursor: pointer
+}
+
+@media(max-width:760px) {
+    .screen {
+        padding: 48px 5% 75px
+    }
+
+    .tulips-left {
+        left: -25px
+    }
+
+    .tulips-right {
+        right: -25px
+    }
+
+    .tulips-left,
+    .tulips-right {
+        font-size: 1.5rem;
+        opacity: .45
+    }
+
+    .mascot {
+        transform: scale(.75)
+    }
+
+    .question-list {
+        grid-template-columns: 1fr;
+        max-width: 480px
+    }
+
+    .qcard h3 {
+        min-height: 0
+    }
+
+    .choices {
+        grid-template-columns: 1fr
+    }
+
+    .gallery {
+        grid-template-columns: 1fr
+    }
+
+    .letter {
+        padding: 30px 24px
+    }
+
+    .gift-options {
+        gap: 12px
+    }
+
+    .gift {
+        padding: 23px 10px
+    }
+
+    .gift-photo {
+        height: 135px
+    }
+
+    .top {
+        padding: 8px 4%
+    }
+
+    .music label {
+        max-width: 72px;
+        overflow: hidden;
+        white-space: nowrap
+    }
+
+    .welcome-card {
+        padding: 28px 17px
+    }
+
+    .actions {
+        gap: 9px
+    }
+
+    .btn {
+        padding: 13px 20px;
+        font-size: .95rem
+    }
+}
+
+@media(max-width:380px) {
+    .gift-options {
+        grid-template-columns: 1fr
+    }
+
+    .gift {
+        max-width: 240px;
+        width: 100%;
+        margin: auto
+    }
+
+    .birthday-title {
+        font-size: 2.7rem
+    }
+}

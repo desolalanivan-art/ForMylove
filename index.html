@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#241044">
+    <title>Happy Birthday, My Loveee! 💜</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="stars" aria-hidden="true"></div>
+    <header class="top"><a class="logo" href="#" id="homeLink">♡ For my love</a>
+      <audio controls autoplay loop>
+        <source src="palagi.mp3">
+      </audio>
+    </header>
+    <main>
+        <section class="screen active" id="welcome">
+            <div class="tulips tulips-left">🌷💜🌷<br>💙🌷💜</div>
+            <div class="tulips tulips-right">💜🌷💙<br>🌷💜🌷</div>
+            <div class="mascot kuromi">LV<b>♡</b></div>
+            <p class="kicker">Eto love, para sayo sana magustohan mo mwapsie</p>
+            <h1>HAPPY BIRTHDAY<br><em>MY LOVEEE!!</em></h1>
+            <p class="lead">Para sa magandang babae sa balat ng lupa. 💜</p>
+            <div class="ornament">✧･ﾟ: *✧･ﾟ:*　🎀　*:･ﾟ✧*:･ﾟ✧</div>
+            <div class="card welcome-card">
+                <div class="bow">🎀</div>
+                <h2>Ready kana ba love?</h2>
+                <p> ♡</p>
+                <div class="actions"><button class="btn yes" id="yes">♡ YES!</button><button class="btn no" id="no">✕
+                        NO</button></div><small id="tease">Hehe… click YES naman! 💜</small>
+            </div>
+            <p class="bottom-note">Yung oo pindutin mo HAHAHAHAHA bahala ka di ka makakapasok sa next surprice♡</p>
+        </section>
+
+        <section class="screen" id="questions">
+            <div class="mascot mini">☠</div>
+            <p class="kicker">Tanong muna aba, baka kase di ikaw yan e</p>
+            <h2 class="section-title">Sagutan mo itong 3 questions, BAWAL MAG CHATGPT HA! ♡</h2>
+            <div class="question-list">
+                <article class="card qcard"><span>QUESTION 01</span>
+                    <h3>Ilang years na tayo?</h3>
+                    <div class="choices"><button data-q="0" data-a="a">Since Birth</button><button data-q="0"
+                            data-a="b">1 Year and 19 months ago 💜</button><button data-q="0" data-a="c">3 Years and Counting?</button></div>
+                </article>
+                <article class="card qcard"><span>QUESTION 02</span>
+                    <h3>Saan First Meet Up naten?</h3>
+                    <div class="choices"><button data-q="1" data-a="a">Sa Park</button><button data-q="1"
+                            data-a="b">Sa ZOO</button><button data-q="1" data-a="c">Sa Sementeryo
+                            ♡</button></div>
+                </article>
+                <article class="card qcard"><span>QUESTION 03</span>
+                    <h3>Ano Lucky Number naten?</h3>
+                    <div class="choices"><button data-q="2" data-a="a">69</button><button data-q="2"
+                            data-a="b">12! 💞</button><button data-q="2" data-a="c">2+2=4 hmm depende kung 3 yan</button>
+                    </div>
+                </article>
+            </div>
+            <p class="feedback" id="qFeedback">BASAHIN MO NG MAAYOS AYDOL. ♡</p><button class="btn yes next"
+                id="toPhotos" disabled>Next surprise →</button>
+        </section>
+
+        <section class="screen" id="memories">
+            <p class="kicker">LAMBINGAN MOMENT</p>
+            <h2 class="section-title">MAHAL MAHALAN 📸</h2>
+            <div class="photo-stage card">
+                <div class="photo-frame"><img id="memoryPhoto" src="assets/photos/photo1.jpg, photo2.jpg, photo3.jpg" alt="Our sweet memory">
+                </div>
+                <p class="caption" id="memoryCaption">WAGAS NA MAHALAN EHHHHHH ♡</p>
+                <div class="dots" id="photoDots"><i class="on"></i><i></i><i></i></div>
+            </div>
+            <button class="btn yes next" id="nextPhoto">Next memory ♡</button>
+        </section>
+
+        <section class="screen" id="birthday">
+            <div class="tulips">🌷 💙 🌷 💜 🌷</div>
+            <p class="kicker">SAYO NA ANG NOVEMBER 12 BASTA SAKEN ANG MAY 12</p>
+            <h1 class="birthday-title">HAPPY BIRTHDAY<br><em>AND HAPPY MONTHSARY!!</em> 💜</h1>
+            <p class="lead">Sana pag palain ka ni lord.</p>
+            <div class="big-heart">♡</div><button class="btn yes next" id="toWish">may isa pa akong surprise →</button>
+        </section>
+
+        <section class="screen" id="wish">
+            <p class="kicker">Ano wish ng birthday girl na yan?</p>
+            <h2 class="section-title">Enter Your Wish 🌙</h2>
+            <div class="card wish-card">
+                <div class="moon">☾</div>
+                <p>Close your eyes and wish for something beautiful.</p><textarea id="wishText"
+                    placeholder="Type your birthday wish here…"></textarea><button class="btn yes" id="saveWish">Save my
+                    wish ♡</button>
+                <p class="feedback" id="wishFeedback"></p>
+            </div>
+        </section>
+
+        <section class="screen" id="candle">
+            <p class="kicker">MAY MAGIC NA MANGYAYARI</p>
+            <h2 class="section-title">Blow mo to! 🎂</h2>
+            <div class="card cake-card">
+                <div class="cake">
+                    <div class="flame" id="flame"></div>
+                    <div class="candle-stick"></div>
+                    <div class="frost"></div>
+                    <div class="cake-top"></div>
+                    <div class="cake-base"></div>
+                    <div class="sprinkles">✦　·　✧　·　✦</div>
+                </div>
+                <h3 id="candleText">Make a wish, then blow your candle!</h3><button class="btn yes" id="blow">✨ Blow the
+                    candle</button>
+            </div>
+        </section>
+
+        <section class="screen" id="portrait">
+            <p class="kicker">Saken lahat to?</p>
+            <div class="birthday-portrait card"><img src="assets/photos/her-birthday.jpg" alt="Birthday girl"
+                    onerror="this.src='assets/photos/placeholder.svg'">
+                <div class="portrait-title">HAPPY 20TH<br>BIRTHDAY<br><em>MY LOVIEE!!</em> 💜</div>
+            </div><button
+                class="btn yes next" id="toLetter">Letter ni Ivan ♡</button>
+        </section>
+
+        <section class="screen" id="letter">
+            <p class="kicker">Words from my heart walang halong A.i</p>
+            <div class="letter card">
+                <div class="letter-top">💜 MULA SA AKONG PUSOH 💜</div>
+                <h2>Hi MY Love,</h2>
+                <div id="letterBody">
+                    <p>Happy 20th birthday and Happy monthsary, Sa dinami dami nating pinag daanan na mga problema at pagsubok sa relasyon naten nagagawan parin 
+                        naten ng paraan para maayos kahit maraming humadlang sa plano naten love sayo at sayo parin ako mag papahinga.</p>
+                    <p>Ikaw lang ang gusto kong makasama sa habang buhay, Wala nakong ibang hihilingin.</p>
+                    <p>At gusto ko lang sabihin na sobrang thankful ako dahil dumating ka sa buhay ko. Hindi ko man alam kung anong tumama sa ulo mo noon para mag kagusto sa isang kumag na katulad ko HAHHAHAHHA pero nagpapasalamat talaga ako dahil ikaw ang kasama ko sa buhay kong ito.
+
+Salamat den love dahil nan dyan ka palagi sa tuwing may problema ako lagi mo talagang pinaparamdam saken na special ako (hindi yung monggoloyd na special child ha) tapos lagi kitang kasama sa hirap man o ginhawa at sa lahat ng masasayang moments, sa mga tawanan, kulitan, lambingan, at kahit sa mga simpleng bagay na ginagawa natin. Hindi mo siguro alam kung gaano ako ka proud sayo sa kung ano ako ngayon ay hindi ako to kung wala ka. gets mo naman siguro yon HAHAHAHA
+
+Alam kong hindi naman palaging magiging masaya ang lahat. May mga pagkakataong magkakaroon tayo ng hindi pagkakaintindihan, tampuhan, at mga pagsubok. Pero sana, sa bawat pagkakataon, piliin pa rin nating intindihin ang isa't isa. Hindi man ako perpekto, gusto kong patuloy na matuto kung paano maging mas mabuting Boy Friend para sa'yo.
+
+Sa birthday mo, ang wish ko ay sana matupad mo lahat ng pangarap mo sa buhay ng maibili mo nako ng pangarap kong MUSTANG.</p>
+                    <p class="handwritten">I love you so much, CLOWINDAA! ♡</p>
+                </div>
+                <small class="signature">Nag mamahal, <b>— Kulot</b></small>
+            </div><button
+                class="btn yes next" id="toGifts">Open your birthday gifts 🎁</button>
+        </section>
+
+        <section class="screen" id="gifts">
+            <p class="kicker">LAST SURPRISE...</p>
+            <h2 class="section-title">Pili ka ng isa, My Love! 🎁</h2>
+            <p class="lead">Makeup or Pera ang gusto mong gift? ♡</p>
+            <div class="gift-options">
+                <button class="gift" data-gift="makeup" type="button">
+                    <img class="gift-photo" src="assets/photos/make%20up.jpg" alt="Makeup gift">
+                    <b>MAKEUP 💄</b>
+                    <small>Gaganda ka lalo!</small>
+                </button>
+                <button class="gift" data-gift="chocolate" type="button">
+                    <img class="gift-photo" src="assets/photos/chocolates.jpg" alt="Chocolate gift">
+                    <b>PERA NA!</b>
+                    <small>Mabibili mo gusto mo dito!</small>
+                </button>
+            </div>
+            <p class="feedback" id="giftFeedback">Pumili ka ng gusto mo, Love. 💜</p>
+            <div class="gift-reveal" id="giftReveal" hidden aria-live="polite">
+                <h3 id="giftRevealTitle"></h3>
+                <img id="giftRevealPhoto" src="" alt="Your chosen birthday gift">
+                <p id="giftRevealMessage"></p>
+            </div>
+            <button class="btn yes" id="finish" hidden>Thank you, Love! ❤️</button>
+        </section>
+        <footer>LOVE NA LOVE KITA MY LOVE!. ♡</footer>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal-card"><button class="close" id="close">×</button>
+            <div class="modal-icon">💜</div>
+            <h2 id="modalTitle">A surprise for you!</h2>
+            <p id="modalMessage"></p><button class="btn yes" id="modalOk">Awww ♡</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
